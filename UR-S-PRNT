@@ -1,0 +1,42 @@
+ 21/12/05                                        MASTERMIND COBOL, INC                                    PAGE   1                  
+   EMP ID      SSN            NAME                                  TYPE  TITLE                  DATE                               
+                                  LAST             FIRST                                                                            
+                                                                                                                                    
+   1234567     111-22-3333    FRUFRU             LULU                10    ANALYST               10/18/1977                         
+                                                                     DEDUCT:     111.11     RATE:    555.90    STATUS  S            
+                                                                                 222.22                                             
+                                                                                 333.33                                             
+                                                                                 444.44                                             
+                                                                                 555.55                                             
+                                                                     TOTAL:     $111.11                                             
+                                                                                                                                    
+   1436588     134-52-8903    WALK               SUE                 08    PROGRAMMER            11/23/2000                         
+   DEDUCTIONS EXCEED MONTHLY EARNINGS                                DEDUCT:     555.55     RATE:      1.03    STATUS  H            
+                                                                                 444.44                                             
+                                                                                 333.33                                             
+                                                                                 222.22                                             
+                                                                                 111.11                                             
+                                                                     TOTAL:   $2,111.09                                             
+                                                                                                                                    
+   1234567     111-22-3333    FRUFRU             LULU                10    ANALYST               10/18/1977                         
+   DEDUCTIONS EXCEED MONTHLY EARNINGS                                DEDUCT:     111.11     RATE:    815.90    STATUS  S            
+                                                                                 222.22                                             
+                                                                                 333.33                                             
+                                                                                 444.44                                             
+                                                                                 555.55                                             
+                                                                     TOTAL:   $1,222.21                                             
+                                                                                                                                    
+   1436588     134-52-8903    WALK               SUE                 08    PROGRAMMER            11/23/2000                         
+                                                                     DEDUCT:     555.55     RATE:    639.03    STATUS  H            
+                                                                                 444.44                                             
+                                                                                 333.33                                             
+                                                                                 222.22                                             
+                                                                                 111.11                                             
+                                                                     TOTAL:   $2,111.09                                             
+                                                                                                                                                                                                                                                                        
+ 21/12/05                                        MASTERMIND COBOL, INC                                    PAGE   2                  
+                                                                                                                                    
+ NUMBER OF EMPLOYEE RECORDS READ:                4                                                                                  
+ NUMBER OF HOURLY EMPLOYEES:                     2    AVERAGE HOURLY RATE:         $320.03          TOTAL AVG DEDUCT:     $1,388.87 
+ NUMBER OF SALARIED EMPLOYEES:                   2    AVERAGE SALARIED RATE:       $685.90          TOTAL DEDUCT:         $5,555.50 
+                                                                                                                                    

@@ -1,12 +1,152 @@
- 21/12/05                                        MASTERMIND COBOL, INC                                    PAGE   1                  
+ 21/12/07                                        MASTERMIND COBOL, INC                                    PAGE   1                  
    EMP ID      SSN            NAME                                  TYPE  TITLE                  DATE                               
                                   LAST             FIRST                                                                            
+                                                                                                                                    
+   1234567     111-22-3333    FRUFRU             LULU                10    ANALYST               10/18/1977                         
+                                                                     DEDUCT:     111.11     RATE:    815.90    STATUS  S            
+                                                                                 222.22                                             
+                                                                                 333.33                                             
+                                                                                 444.44                                             
+                                                                                 555.55                                             
+                                                                     TOTAL:     $111.11                                             
+                                                                                                                                    
+   1436588     134-52-8903    WALK               SUE                 08    PROGRAMMER            11/23/2000                         
+   DEDUCTIONS EXCEED MONTHLY EARNINGS                                DEDUCT:     555.55     RATE:    639.03    STATUS  S            
+                                                                                 444.44                                             
+                                                                                 333.33                                             
+                                                                                 222.22                                             
+                                                                                 111.11                                             
+                                                                     TOTAL:   $2,111.09                                             
+                                                                                                                                    
+   4589300     254-86-8483    FRAKER             RICHARD             01    PLANNER               06/05/2030                         
+   DEDUCTIONS EXCEED MONTHLY EARNINGS                                DEDUCT:     123.45     RATE:    645.78    STATUS  S            
+                                                                                 123.45                                             
+                                                                                 123.45                                             
+                                                                                 123.45                                             
+                                                                                 123.45                                             
+                                                                     TOTAL:   $1,234.55                                             
+                                                                                                                                    
+   1234567     343-43-4444    URFURF             PETE                09    DISASTER RECOVERY     03/23/1977                                                                                                                                                             
+ 21/12/07                                        MASTERMIND COBOL, INC                                    PAGE   2                  
+   EMP ID      SSN            NAME                                  TYPE  TITLE                  DATE                               
+                                  LAST             FIRST                                                                            
+                                                                                                                                    
+                                                                     DEDUCT:     111.11     RATE:  6,798.01    STATUS  S            
+                                                                                 111.11                                             
+                                                                                 111.11                                             
+                                                                                 111.11                                             
+                                                                                 111.11                                             
+                                                                     TOTAL:     $604.91                                             
+                                                                                                                                    
+   3849838     483-93-8883    WASHINGTON         SUSANNAH            04    SYSTEM ANALYST        12/14/1995                         
+                                                                     DEDUCT:     222.22     RATE:    887.40    STATUS  S            
+                                                                                 222.22                                             
+                                                                                 222.22                                             
+                                                                                 222.22                                             
+                                                                                 222.22                                             
+                                                                     TOTAL:     $666.66                                             
+                                                                                                                                    
+   9865878     247-95-8499    MOOR               JOHNIE              07    DRIVER                03/23/1996                         
+                                                                     DEDUCT:     333.33     RATE:     15.79    STATUS  H            
+                                                                                 333.33                                             
+                                                                                 333.33                                             
+                                                                                 333.33                                             
+                                                                                 333.33                                             
+                                                                     TOTAL:   $1,222.21                                             
+                                                                                                                                    
+   0686766     169-58-4990    ANTROPOLUS         JUANITA             03    WINDOW WASHER         04/12/1930                         
+                                                                     DEDUCT:     444.44     RATE:     17.21    STATUS  H                                                                                                                                                
+ 21/12/07                                        MASTERMIND COBOL, INC                                    PAGE   3                  
+   EMP ID      SSN            NAME                                  TYPE  TITLE                  DATE                               
+                                  LAST             FIRST                                                                            
+                                                                                                                                    
+                                                                                 444.44                                             
+                                                                                 444.44                                             
+                                                                                 444.44                                             
+                                                                                 444.44                                             
+                                                                     TOTAL:   $1,777.76                                             
+                                                                                                                                    
+   7494883     038-64-8844    MUNCHMORE          IGOR                02    VALET                 07/14/1985                         
+   DEDUCTIONS EXCEED MONTHLY EARNINGS                                DEDUCT:     555.55     RATE:     11.63    STATUS  H            
+                                                                                 555.55                                             
+                                                                                 555.55                                             
+                                                                                 555.55                                             
+                                                                                 555.55                                             
+                                                                     TOTAL:   $2,333.31                                             
+                                                                                                                                    
+   0557733     223-34-4556    ANT                JUAN                05    DISH WASHER           07/12/1990                         
+   DEDUCTIONS EXCEED MONTHLY EARNINGS                                DEDUCT:       0.00     RATE:     10.95    STATUS  H            
+                                                                                   0.00                                             
+                                                                                   0.00                                             
+                                                                                   0.00                                             
+                                                                                   0.00                                             
+                                                                     TOTAL:   $2,222.20                                             
+                                                                                                                                    
+   5585855     999-99-7777    PANTHER            PAULA               06    MANAGER               09/23/1986                         
+                                                                     DEDUCT:     111.11     RATE:    526.92    STATUS  S            
+                                                                                 111.11                                                                                                                                                                                 
+ 21/12/07                                        MASTERMIND COBOL, INC                                    PAGE   4                  
+   EMP ID      SSN            NAME                                  TYPE  TITLE                  DATE                               
+                                  LAST             FIRST                                                                            
+                                                                                                                                    
+                                                                                 111.11                                             
+                                                                                 111.11                                             
+                                                                                 111.11                                             
+                                                                     TOTAL:     $111.11                                             
+                                                                                                                                    
+   9865878     247-95-8499    MOOR               JOHNIE              07    DRIVER                03/23/1996                         
+                                                                     DEDUCT:     222.22     RATE:     15.79    STATUS  H            
+                                                                                 222.22                                             
+                                                                                 222.22                                             
+                                                                                 222.22                                             
+                                                                                 222.22                                             
+                                                                     TOTAL:     $666.66                                             
+                                                                                                                                    
+   0686766     169-58-4990    ANTROPOLUS         JUANITA             03    WINDOW WASHER         04/12/1930                         
+                                                                     DEDUCT:     333.33     RATE:     17.21    STATUS  H            
+                                                                                 333.33                                             
+                                                                                 333.33                                             
+                                                                                 333.33                                             
+                                                                                 333.33                                             
+                                                                     TOTAL:   $1,222.21                                             
+                                                                                                                                    
+   7494883     038-64-8844    MUNCHMORE          IGOR                02    VALET                 07/14/1985                         
+                                                                     DEDUCT:     444.44     RATE:     11.63    STATUS  H            
+                                                                                 444.44                                             
+                                                                                 444.44                                                                                                                                                                                 
+ 21/12/07                                        MASTERMIND COBOL, INC                                    PAGE   5                  
+   EMP ID      SSN            NAME                                  TYPE  TITLE                  DATE                               
+                                  LAST             FIRST                                                                            
+                                                                                                                                    
+                                                                                 444.44                                             
+                                                                                 444.44                                             
+                                                                     TOTAL:   $1,777.76                                             
+                                                                                                                                    
+   0557733     223-34-4556    ANT                JUAN                05    DISH WASHER           07/12/1990                         
+   DEDUCTIONS EXCEED MONTHLY EARNINGS                                DEDUCT:     555.55     RATE:     10.95    STATUS  H            
+                                                                                 555.55                                             
+                                                                                 555.55                                             
+                                                                                 555.55                                             
+                                                                                 555.55                                             
+                                                                     TOTAL:   $2,333.31                                             
+                                                                                                                                    
+   5585855     999-99-7777    PANTHER            PAULA               06    MANAGER               09/23/1986                         
+   DEDUCTIONS EXCEED MONTHLY EARNINGS                                DEDUCT:       0.00     RATE:    526.92    STATUS  S            
+                                                                                   0.00                                             
+                                                                                   0.00                                             
+                                                                                   0.00                                             
+                                                                                   0.00                                             
+                                                                     TOTAL:   $2,222.20                                             
                                                                                                                                     
    1234567     111-22-3333    FRUFRU             LULU                10    ANALYST               10/18/1977                         
                                                                      DEDUCT:     111.11     RATE:    555.90    STATUS  S            
                                                                                  222.22                                             
                                                                                  333.33                                             
-                                                                                 444.44                                             
+                                                                                 444.44                                                                                                                                                                                 
+ 21/12/07                                        MASTERMIND COBOL, INC                                    PAGE   6                  
+   EMP ID      SSN            NAME                                  TYPE  TITLE                  DATE                               
+                                  LAST             FIRST                                                                            
+                                                                                                                                    
                                                                                  555.55                                             
                                                                      TOTAL:     $111.11                                             
                                                                                                                                     
@@ -31,12 +171,16 @@
                                                                                  444.44                                             
                                                                                  333.33                                             
                                                                                  222.22                                             
-                                                                                 111.11                                             
+                                                                                 111.11                                                                                                                                                                                 
+ 21/12/07                                        MASTERMIND COBOL, INC                                    PAGE   7                  
+   EMP ID      SSN            NAME                                  TYPE  TITLE                  DATE                               
+                                  LAST             FIRST                                                                            
+                                                                                                                                    
                                                                      TOTAL:   $2,111.09                                             
                                                                                                                                                                                                                                                                         
- 21/12/05                                        MASTERMIND COBOL, INC                                    PAGE   2                  
+ 21/12/07                                        MASTERMIND COBOL, INC                                    PAGE   8                  
                                                                                                                                     
- NUMBER OF EMPLOYEE RECORDS READ:                4                                                                                  
- NUMBER OF HOURLY EMPLOYEES:                     2    AVERAGE HOURLY RATE:         $320.03          TOTAL AVG DEDUCT:     $1,388.87 
- NUMBER OF SALARIED EMPLOYEES:                   2    AVERAGE SALARIED RATE:       $685.90          TOTAL DEDUCT:         $5,555.50 
+ NUMBER OF EMPLOYEE RECORDS READ:               19                                                                                  
+ NUMBER OF HOURLY EMPLOYEES:                    10    AVERAGE HOURLY RATE:          $75.12          TOTAL AVG DEDUCT:     $1,377.50 
+ NUMBER OF SALARIED EMPLOYEES:                   9    AVERAGE SALARIED RATE:     $1,356.86          TOTAL DEDUCT:        $26,172.55 
                                                                                                                                     

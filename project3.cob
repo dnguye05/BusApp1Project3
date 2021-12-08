@@ -189,6 +189,9 @@
            CLOSE INPUT-FILE
                PRNT-FILE.
            STOP RUN.
+      ******************************************************************
+      *    PRINT THE HEADER
+      ******************************************************************
        1400-PRINT-HEADER.
            ACCEPT H1-CURR-DATE FROM DATE.
            IF PGNUM = 1
@@ -210,13 +213,24 @@
            MOVE 0 TO RECORDPAGECOUNTER.
            ADD 1 TO PGNUM.
            MOVE PGNUM TO H1-PAGENUM.
+      ******************************************************************
+      *    LOOPING THROUGH THE RECORDS IN THE NEWEMP FILE
+      ******************************************************************
        1500-LOOP.
            PERFORM 1600-PRINT-RECORDS.
            PERFORM 2000-READ-INPUT.
-       1600-PRINT-RECORDS.
+      ******************************************************************
+      *    THIS KEEPS TRACK OF NUMBER OF LINES PRINTED
+      ******************************************************************
+       1590-PAGE-COUNTER.
+           ADD 1 TO RECORDPAGECOUNTER.
            IF RECORDPAGECOUNTER = 25
                PERFORM 1400-PRINT-HEADER
            END-IF.
+      ******************************************************************
+      *    PRINT THE NORMAL EMPLOYEE RECORDS
+      ******************************************************************
+       1600-PRINT-RECORDS.
            MOVE I-EMPID TO L-EMPID.
            MOVE I-SSN TO L-SSN.
            INSPECT L-SSN REPLACING ALL ' ' BY '-'.
@@ -227,12 +241,16 @@
            MOVE I-DATE TO L-DATE.
            WRITE PRNT-REC FROM PRNT-DATA1
                AFTER ADVANCING 1 LINE.
+           PERFORM 1590-PAGE-COUNTER.
            PERFORM 1620-PRINT-DEDUCT.
-           ADD 1 TO RECORDPAGECOUNTER.
            ADD 1 TO EMPCOUNTER.
+      ******************************************************************
+      *    PRINT THE DUDUCT VALUES
+      ******************************************************************
        1620-PRINT-DEDUCT.
            MOVE I-EMPRATE TO EMPRATE-FORMATER.
            MOVE I-DEDUCT(1) TO DEDUCT-FORMAT(1).
+      *    PRE-PRINT DATA COMPUTATION
            IF I-EMPSTATUS = 'H'
                COMPUTE EMPHCOUNT = EMPHCOUNT + 1
                COMPUTE TOTALHRATE = TOTALHRATE + EMPRATE-FORMATER
@@ -246,6 +264,7 @@
                COMPUTE TOTALEMPDEDUCT = 
                    TOTALEMPDEDUCT + DEDUCT-FORMAT(SUB)
            END-PERFORM.
+      *    PRINT THE DEDUCT MESSAGE
            IF I-EMPSTATUS = 'H' AND
                TOTALEMPDEDUCT > MONTHLY-EMP-RATE-BONUS THEN
                    PERFORM 1640-PRINT-EXCEED-DEDUCT
@@ -257,34 +276,50 @@
                        PERFORM 1630-PRINT-NORMAL-DEDUCT
                   END-IF
            END-IF
+      *    PRINT THE DEDUCT OF EMP HAVE
            PERFORM VARYING SUB FROM 2 BY 1
                UNTIL SUB > 5
                MOVE I-DEDUCT(SUB) TO DEDUCT-FORMAT(SUB)
                MOVE DEDUCT-FORMAT(SUB) TO L-DEDUCTOTHERS
                WRITE PRNT-REC FROM PRNT-DATA3
                    AFTER ADVANCING 1 LINE
+               PERFORM 1590-PAGE-COUNTER
            END-PERFORM.
+      *    PRINT THE TOTAL EMP DEDUCT
            MOVE TOTALEMPDEDUCT TO L-DEDUCTTOTAL.
            WRITE PRNT-REC FROM PRNT-DATA4
                AFTER ADVANCING 1 LINE.
+           PERFORM 1590-PAGE-COUNTER.
            MOVE SPACES TO PRNT-REC
            WRITE PRNT-REC
                AFTER ADVANCING 1 LINE.
+           PERFORM 1590-PAGE-COUNTER.
            COMPUTE DEDUCT-COUNT = DEDUCT-COUNT + 1.
            COMPUTE TOTAL-DEDUCT = TOTAL-DEDUCT + TOTALEMPDEDUCT.
            MOVE 0 TO TOTALEMPDEDUCT.
+      ******************************************************************
+      *    PRINT THE NORMAL DEDUCT MESSAGE
+      ******************************************************************
        1630-PRINT-NORMAL-DEDUCT.
            MOVE DEDUCT-FORMAT(1) TO L-DEDUCT1.
            MOVE EMPRATE-FORMATER TO L-EMPRATE.
            MOVE I-EMPSTATUS TO L-EMPSTATUS.
            WRITE PRNT-REC FROM PRNT-DATA2
                AFTER ADVANCING 1 LINE.
+           PERFORM 1590-PAGE-COUNTER.
+      ******************************************************************
+      *    PRINT THE BONUS DEDUCT MESSAGE
+      ******************************************************************
        1640-PRINT-EXCEED-DEDUCT.
            MOVE DEDUCT-FORMAT(1) TO L-DEDUCT1-BONUS.
            MOVE EMPRATE-FORMATER TO L-EMPRATE-BONUS.
            MOVE I-EMPSTATUS TO L-EMPSTATUS-BONUS.
            WRITE PRNT-REC FROM PRNT-DATA2-BONUS
                AFTER ADVANCING 1 LINE.
+           PERFORM 1590-PAGE-COUNTER.
+      ******************************************************************
+      *    PRINT THE FOOTER DATA
+      ******************************************************************
        1700-PRINT-FOOTER.
       *    PRINT FOOTER HEADER.
            MOVE SPACES TO PRNT-REC.
@@ -318,6 +353,9 @@
            MOVE SPACES TO PRNT-REC.
            WRITE PRNT-REC
                AFTER ADVANCING 1 LINE.
+      ******************************************************************
+      *    READ IN NEWEMP FILE
+      ******************************************************************
        2000-READ-INPUT.
            READ INPUT-FILE INTO INPUT-DATA
                AT END MOVE 1 TO EOF-I.
